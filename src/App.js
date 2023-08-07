@@ -70,9 +70,9 @@ function App() {
   return (
     <div className="container">
       <h1>Todo List</h1>
-      <SearchTodo onSearch={handleSearchTodo} onBack={handleSearchBack} />
-      <TodoList todos={todos} onDelete={handleDeleteTodo} onUpdate={handleUpdateTodo} onClearList={handleClearList} />
       <AddTodo onAdd={handleAddTodo} />
+      <TodoList todos={todos} onDelete={handleDeleteTodo} onUpdate={handleUpdateTodo} onClearList={handleClearList} />
+      <SearchTodo onSearch={handleSearchTodo} onBack={handleSearchBack} />
     </div>
   );
 }
