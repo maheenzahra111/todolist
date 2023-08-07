@@ -2,7 +2,7 @@
 body {
     height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #133f4bdc;
+    background-color: #f0dde6;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,10 +13,11 @@ body {
 .container {
     max-width: 1600px;
     width: 100%;
-    padding: 80px;
+    padding: 60px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #28a9c9cf;
+    background-color: #e2c4d3c4;
+    margin: 0 auto;
 }
 
 h1 {
@@ -148,4 +149,46 @@ h1 {
 
 .search-todo-form button:hover {
     background-color: #77787c7d;
+}
+
+.back-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.back-button {
+    padding: 14px 60px;
+    font-size: 30px;
+    background-color: #524a4a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #79777f96;
+}
+
+.clear-list-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.clear-list-button button {
+    padding: 14px 30px;
+    font-size: 30px;
+    background-color: #434347;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clear-list-button button:hover {
+    background-color: #4f525f69;
 }

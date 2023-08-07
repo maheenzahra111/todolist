@@ -7,10 +7,18 @@ function AddTodo({ onAdd }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (text.trim()) {
-            onAdd(text);
-            setText('');
+            const newItem = text.trim().toLowerCase();
+            const existingItem = onAdd(newItem);
+            if (!existingItem) {
+                alert("item already exist.") // Clear the input field if not a duplicate
+            } else {
+                // Handle the case where it's a duplicate
+                console.log('Item already exists');
+            }
         }
+        setText('');
     };
+
 
     return (
         <form className="add-todo-form" onSubmit={handleSubmit}>
