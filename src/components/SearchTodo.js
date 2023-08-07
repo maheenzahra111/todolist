@@ -3,30 +3,28 @@ import React, { useState } from 'react';
 function SearchTodo({ onSearch, onBack }) {
     const [searchText, setSearchText] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        onSearch(searchText);
+    const handleSearchChange = (e) => {
+        const newSearchText = e.target.value;
+        setSearchText(newSearchText);
+        onSearch(newSearchText);
     };
 
-    const handleBack = () => {
-        setSearchText(''); // Clear search input when going back
-        onBack();
+    const handleMyList = () => {
+        setSearchText(''); // Clear the search text
+        onBack(); // Go back to the original list
     };
 
     return (
         <div className="search-todo">
-            <form className="search-todo-form" onSubmit={handleSubmit}>
+            <form className="search-todo-form">
                 <input
                     type="text"
                     value={searchText}
-                    onChange={(e) => setSearchText(e.target.value)}
+                    onChange={handleSearchChange}
                     placeholder="Search todo"
                 />
-                <button type="submit">Search</button>
+                {searchText && <button className="my-list-button" onClick={handleMyList}>Cancel</button>}
             </form>
-            <div className="back-button-container">
-                <button className="back-button" onClick={handleBack}>Back</button>
-            </div>
         </div>
     );
 }
