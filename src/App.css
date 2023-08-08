@@ -82,13 +82,11 @@ h1 {
     width: 100%;
 }
 
-/* Add some spacing between the text and the button container */
 .todo-text {
     flex: 1;
     margin-right: 20px;
 }
 
-/* Add styles for the button container */
 .button-container {
     display: flex;
     align-items: center;
